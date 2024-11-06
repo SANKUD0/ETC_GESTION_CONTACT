@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Tableau de Bord";
+    Layout = null; // Si tu ne souhaites pas utiliser le layout global (_Layout.cshtml)
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css"> <!-- Lien vers ton fichier CSS -->
+    <style>
+        /* Style simple pour le tableau de bord */
+        .dashboard-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .dashboard-header h2 {
+            margin: 0;
+        }
+        .user-info {
+            margin-bottom: 20px;
+        }
+        .action-buttons button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Tableau de Bord</h2>
+            <button onclick="window.location.href='@Url.Action("Logout", "Account")'" class="btn btn-secondary">Déconnexion</button>
+        </div>
+
+        <div class="user-info">
+            <h3>Informations du Compte</h3>
+            <p><strong>Nom d'utilisateur :</strong> @Model.Username</p>
+            <p><strong>Email :</strong> @Model.Email</p>
+            <p><strong>Date d'inscription :</strong> @Model.RegistrationDate.ToString("dd/MM/yyyy")</p>
+        </div>
+
+        <div class="action-buttons">
+            <h3>Actions</h3>
+            <button onclick="window.location.href='@Url.Action("Edit", "Account")'" class="btn btn-primary">Mettre à jour les informations</button>
+            <button onclick="window.location.href='@Url.Action("ChangePassword", "Account")'" class="btn btn-warning">Changer le mot de passe</button>
+            <button onclick="if(confirm('Êtes-vous sûr de vouloir supprimer votre compte ?')) window.location.href='@Url.Action("DeleteAccount", "Account")'" class="btn btn-danger">Supprimer le compte</button>
+        </div>
+    </div>
+
+</body>
+</html>
