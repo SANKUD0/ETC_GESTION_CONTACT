@@ -1,0 +1,11 @@
+@ETC_GESTION_CONTACT_HostAddress = http://localhost:5211
+
+GET {{ETC_GESTION_CONTACT_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{ETC_GESTION_CONTACT_HostAddress}}/todos/1
+Accept: application/json
+
+###
