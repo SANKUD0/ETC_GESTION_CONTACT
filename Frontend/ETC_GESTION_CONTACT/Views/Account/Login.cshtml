@@ -1,3 +1,31 @@
 ﻿@{
     Layout = null;
 }
+
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ETC_GESTION_CONTACT.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="login-container">
+        <h2>Connexion</h2>
+        <form asp-action="Login" method="post">
+            <div>
+                <label>Adresse courriel</label>
+                <input type="text" name="Email" required/>
+            </div>
+            <div>
+                <label>Mot de passe</label>
+                <input type="password" name="Password" required/>
+            </div>
+            <button type="submit">Se connecter</button> 
+        </form>
+    </div>
+</body>
+</html>
