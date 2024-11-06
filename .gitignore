@@ -1,0 +1,8 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Frontend/.vs
+/Frontend/ETC_GESTION_CONTACT/obj
+/Frontend/ETC_GESTION_CONTACT/bin/Debug/net8.0
