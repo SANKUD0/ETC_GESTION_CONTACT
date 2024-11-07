@@ -9,28 +9,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Créer un compte</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ETC_GESTION_CONTACT.styles.css" asp-append-version="true" />
 </head>
 <body>
     <div class="Register-container">
-        <h2>Créer un compte</h2>
-        <form asp-action="Register">
-            <div>
-                <label>Adresse courriel</label>
-                <input type="text" name="Email" required />
-            </div>
-            <div>
-                <label>Mot de passe</label>
-                <input type="password" name="Password" required />
-            </div>
-            <div>
-                <label>Confirmer le mot de passe</label>
-                <input type="password" name="ConfirmPassword" required />
-            </div>
-            <a href="~/Account/Login">Déjà un compte? Connectez-vous</a>
-            <button type="submit">Créer un compte</button>
-        </form>
+        <div class="centered-div">
+            <h2>Créer un compte</h2>
+            <form asp-action="Register">
+                <div>
+                    <input type="text" name="firstname" placeholder="Prénom" required/>
+                </div><br />
+                <div>
+                    <input type="text" name="lastname" placeholder="Nom de famille" required/>
+                </div><br />
+                <div>
+                    <input type="text" name="PhoneNumber" placeholder="Numéro de téléphone" required/>
+                </div><br />
+                <div>
+                    <input type="text" name="Email" placeholder="Adresse courriel" required />
+                </div><br />
+                <div>
+                    <input type="password" name="Password" placeholder="Mot de passe" required />
+                </div><br />
+                <div>
+                    <input type="password" name="ConfirmPassword" placeholder="Confirmer le mot de passe" required />
+                </div>
+                <div>
+                    <a class="login-account" href="~/Account/Login">Déjà un compte !</a>
+                </div>
+                <button class="create-account" type="submit">Créer un compte</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

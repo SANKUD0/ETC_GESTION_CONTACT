@@ -1,0 +1,75 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.Register-container {
+    background: linear-gradient(0.7turn,#003135,#0fa4af,#024950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered-div {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    background-color: white;
+    background-color: rgba(0,0,0,0.25);
+    border-top: 4px solid #003135;
+}
+h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 17px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border: 2px solid #cccccc;
+    border-radius: 20px;
+    padding: 8px;
+    width: 275px;
+    box-sizing: border-box;
+    outline: none;
+}
+input::placeholder{
+    color:#888;
+}
+
+.create-account {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333333; /* Couleur sombre pour le texte sur le bouton */
+    background-color: #e0e0e0; /* Gris clair pour correspondre au style de l'arrière-plan */
+    border: none;
+    border-radius: 20px; /* Bordures arrondies comme les champs de saisie */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+    .create-account:hover {
+        background-color: #cccccc; /* Couleur légèrement plus foncée au survol */
+        transform: scale(1.02); /* Légère augmentation de la taille pour l’effet visuel */
+    }
+    .create-account:active {
+        background-color: #b3b3b3; /* Couleur plus foncée au clic */
+        transform: scale(0.98); /* Légère réduction pour effet de clic */
+    }
+
+.login-account {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+    .login-account:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
