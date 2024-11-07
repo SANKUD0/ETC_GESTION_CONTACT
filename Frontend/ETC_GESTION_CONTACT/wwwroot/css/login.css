@@ -39,10 +39,6 @@ input[type="email"] {
     outline: none;
 }
 
-input[type="email"],
-input[type="password"]{
-    margin-bottom: 10px;
-}
 
     input[type="text"]:focus,
     input[type="password"]:focus,
