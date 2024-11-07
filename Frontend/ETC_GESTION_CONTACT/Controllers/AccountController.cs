@@ -15,11 +15,5 @@ namespace ETC_GESTION_CONTACT.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Login(UserLoginModel model)
-        {
-            // Logique de connexion ici
-            return RedirectToAction("Index", "GestionCompte");
-        }
     }
 }
