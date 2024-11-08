@@ -10,7 +10,7 @@ namespace ETC_GESTION_CONTACT.Controllers
         {
             // Configure l'URL de base pour pointer vers le backend
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:5148");
+            _httpClient.BaseAddress = new Uri("https://localhost:32778");
         }
 
         // Affiche la page de connexion
@@ -26,7 +26,7 @@ namespace ETC_GESTION_CONTACT.Controllers
             var responde = await _httpClient.PostAsJsonAsync("/api/auth/login", model);
             // Si la connexion est réussie, redirige vers la page d'accueil
             if (responde.IsSuccessStatusCode)
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Home", "GestionContact");
             else
             {
                 // Si la connexion échoue, affiche un message d'erreur
