@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gestion contact</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Gestion.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ETC_GESTION_CONTACT.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="dashboard">
+            <nav class="nav flex-column">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pd-3">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>
